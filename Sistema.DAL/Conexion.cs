@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sistema.DAL
 {
-    public class Class1
+    public class Conexion
     {
+        public static string Cadena = "Server=MIGUEL;Database=SistemaGestion;User id=migueldblog;Password=123456;";
     }
 }
