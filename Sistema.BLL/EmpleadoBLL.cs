@@ -40,5 +40,11 @@ namespace Sistema.BLL
                 throw new Exception("El ID es inválido");
             dal.Eliminar(id);
         }
+
+        //Listar empleados
+        public List<Empleado> ListarEmpleados()
+        {
+            return dal.Listar();
+        }
     }
 }
