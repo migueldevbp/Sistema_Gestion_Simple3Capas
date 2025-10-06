@@ -60,6 +60,10 @@
       <Project>{5d8f689f-d899-4393-ab5d-22c4968d6799}</Project>
       <Name>Sistema.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sistema.DAL\Sistema.DAL.csproj">
+      <Project>{84dded90-14e0-4629-85f9-5b501a002ab8}</Project>
+      <Name>Sistema.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EmpleadoForm.resx">

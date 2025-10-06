@@ -84,6 +84,7 @@
             this.pictureBoxFoto.Location = new System.Drawing.Point(753, 25);
             this.pictureBoxFoto.Name = "pictureBoxFoto";
             this.pictureBoxFoto.Size = new System.Drawing.Size(300, 345);
+            this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFoto.TabIndex = 4;
             this.pictureBoxFoto.TabStop = false;
             // 
@@ -96,6 +97,7 @@
             this.btnCargarImagen.TabIndex = 5;
             this.btnCargarImagen.Text = "CARGAR IMAGEN";
             this.btnCargarImagen.UseVisualStyleBackColor = true;
+            this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
             // 
             // btnGuardar
             // 
@@ -106,6 +108,7 @@
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnActualizar
             // 
@@ -116,6 +119,7 @@
             this.btnActualizar.TabIndex = 7;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -126,6 +130,7 @@
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvEmpleados
             // 
@@ -136,6 +141,7 @@
             this.dgvEmpleados.RowTemplate.Height = 28;
             this.dgvEmpleados.Size = new System.Drawing.Size(678, 309);
             this.dgvEmpleados.TabIndex = 9;
+            this.dgvEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellClick);
             // 
             // EmpleadoForm
             // 
