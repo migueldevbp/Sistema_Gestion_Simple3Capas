@@ -35,7 +35,8 @@ namespace Sistema.DAL
                 cmd.Parameters.AddWithValue("@Id", id);
                 cmd.Parameters.AddWithValue("@Nombre", nombre);
                 cmd.Parameters.AddWithValue("@Cargo", cargo);
-                cmd.Parameters.AddWithValue("@Foto", foto);
+                //cmd.Parameters.AddWithValue("@Foto", foto);
+                cmd.Parameters.Add("@Foto", SqlDbType.VarBinary).Value = (object)foto ?? DBNull.Value;
                 cn.Open();
                 cmd.ExecuteNonQuery();
             }
