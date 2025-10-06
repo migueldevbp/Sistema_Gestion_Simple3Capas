@@ -59,7 +59,7 @@ namespace Sistema.UI
 
                 empleadoBLL.RegistrarEmpleado(nombre, cargo, foto);
                 MessageBox.Show("Empleado registrado correctamente");
-                //LimpiarFormularios();
+                LimpiarFormulario();
                 CargarEmpleados();
             }
             catch (Exception ex)
@@ -128,7 +128,21 @@ namespace Sistema.UI
                 empleadoSeleccionadoId = Convert.ToInt32(fila.Cells["Id"].Value);
                 txtNombre.Text = fila.Cells["Nombre"].Value.ToString();
                 txtCargo.Text = fila.Cells["Cargo"].Value.ToString();
-                pictureBoxFoto.Image = null; // Puedes cargar la imagen si lo deseas
+                //pictureBoxFoto.Image = null; ESTE C[ODIGO YA NO VA
+                // Cargar imagen desde byte[] si existe
+                if (fila.Cells["Foto"].Value != DBNull.Value && fila.Cells["Foto"].Value != null)
+                {
+                    byte[] foto = (byte[])fila.Cells["Foto"].Value;
+                    using (MemoryStream ms = new MemoryStream(foto))
+                    {
+                        pictureBoxFoto.Image = Image.FromStream(ms);
+                    }
+                }
+                else
+                {
+                    pictureBoxFoto.Image = null;
+                }
+
             }
 
         }
